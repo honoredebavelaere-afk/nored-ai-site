@@ -48,14 +48,14 @@ export default function Hero() {
             >
               Vos commerciaux vendent.
             </motion.h1>
-            <motion.h1
+            <motion.p
               className="text-[clamp(2.5rem,5vw,4.25rem)] heading-display text-text-tertiary"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.16, ease }}
             >
               On automatise le reste.
-            </motion.h1>
+            </motion.p>
 
             {/* Subtext */}
             <motion.p

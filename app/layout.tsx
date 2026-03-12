@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "nored AI",
@@ -86,6 +86,73 @@ const jsonLd = {
   priceRange: "€€",
 };
 
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Combien de temps faut-il pour déployer votre solution d'automatisation IA ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Le déploiement prend en moyenne 5 à 10 jours ouvrés, de l'audit initial jusqu'à la mise en production. Cela inclut la configuration sur mesure, les tests, et une formation de votre équipe.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Quels CRM et outils intégrez-vous ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nous nous connectons à la plupart des CRM du marché (HubSpot, Pipedrive, Salesforce, Notion, etc.) ainsi qu'aux outils de communication (Gmail, Outlook, Slack) via n8n. Si votre outil dispose d'une API, nous pouvons l'intégrer.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Mon équipe commerciale devra-t-elle changer ses habitudes ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non. Les automatisations s'intègrent dans vos outils existants. Vos commerciaux continuent d'utiliser leur CRM et leurs emails habituels — l'IA travaille en arrière-plan sans friction.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Mes données sont-elles sécurisées ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Nous travaillons avec des solutions conformes au RGPD, hébergées en Europe. Vos données ne transitent pas par des tiers non autorisés. Chaque déploiement est conçu avec la souveraineté des données en priorité.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Est-ce que je peux voir une démonstration avant de m'engager ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Nous proposons un audit gratuit de 15 minutes via Google Meet où nous identifions ensemble les tâches automatisables dans votre process commercial. Sans engagement et 100% actionnable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Quelles tâches commerciales peut-on automatiser avec l'IA ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Les principales tâches automatisables sont : le remplissage automatique du CRM après chaque appel, la rédaction des emails de suivi, la génération de devis personnalisés, la qualification des leads, et la création de rapports d'activité.",
+      },
+    },
+  ],
+};
+
+const jsonLdBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://noredai.digital" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://noredai.digital/services" },
+    { "@type": "ListItem", position: 3, name: "Notre Méthode", item: "https://noredai.digital/process" },
+    { "@type": "ListItem", position: 4, name: "À propos", item: "https://noredai.digital/about" },
+    { "@type": "ListItem", position: 5, name: "Contact", item: "https://noredai.digital/contact" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,7 +163,15 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
         />
       </head>
       <body
