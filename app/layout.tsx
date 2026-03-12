@@ -48,7 +48,12 @@ export const metadata: Metadata = {
   creator: "nored AI",
   publisher: "nored AI",
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/nored-ai-logo.png", sizes: "any" },
+    ],
+    apple: "/nored-ai-logo.png",
+    shortcut: "/nored-ai-logo.png",
   },
   openGraph: {
     title: "nored AI — Automatisation IA pour équipes commerciales PME",
@@ -58,6 +63,14 @@ export const metadata: Metadata = {
     siteName: "nored AI",
     type: "website",
     locale: "fr_FR",
+    images: [
+      {
+        url: "/nored-ai-logo.png",
+        width: 1080,
+        height: 1080,
+        alt: "nored AI — Automatisation IA pour équipes commerciales PME",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,6 +79,7 @@ export const metadata: Metadata = {
       "CRM rempli automatiquement, emails de suivi rédigés, devis en 2 min. Vos commerciaux récupèrent 2h par jour.",
     site: "@noredai",
     creator: "@noredai",
+    images: ["/nored-ai-logo.png"],
   },
   robots: {
     index: true,
