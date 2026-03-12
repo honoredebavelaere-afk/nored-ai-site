@@ -29,12 +29,13 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <p className="text-text-tertiary text-sm mb-4">Fondateur</p>
-            <h1 className="text-3xl md:text-4xl heading-display mb-4">Honore</h1>
+            <p className="text-text-tertiary text-sm mb-4">Fondateur de nored AI</p>
+            <h1 className="text-3xl md:text-4xl heading-display mb-4">Honore — nored AI</h1>
             <p className="text-text-secondary leading-relaxed text-lg max-w-lg">
               Base en Ecosse (Glasgow Caledonian University), specialise en automatisation
               commerciale avec n8n et l&apos;IA. Je construis des systemes qui liberent
               les equipes de vente du travail administratif repetitif.
+              nored, c&apos;est l&apos;agence specialisee en automatisation IA pour les PME B2B.
             </p>
           </div>
         </div>

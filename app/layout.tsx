@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   description:
     "Automatisez le travail administratif de vos commerciaux avec l'IA. CRM rempli automatiquement, emails de suivi rédigés, devis en 2 min. Déployé en 5-10 jours.",
   keywords: [
+    "nored",
+    "nored AI",
+    "noredai",
     "automatisation IA commerciale",
     "CRM automatique PME",
     "automatisation emails B2B",
@@ -40,8 +43,10 @@ export const metadata: Metadata = {
     "automatisation prospection",
     "gain de temps commercial",
   ],
+  applicationName: "nored AI",
   authors: [{ name: "Honoré Debavelaere", url: "https://www.noredai.digital" }],
   creator: "nored AI",
+  publisher: "nored AI",
   icons: {
     icon: "/favicon.svg",
   },
@@ -59,6 +64,8 @@ export const metadata: Metadata = {
     title: "nored AI — Automatisation IA pour équipes commerciales PME",
     description:
       "CRM rempli automatiquement, emails de suivi rédigés, devis en 2 min. Vos commerciaux récupèrent 2h par jour.",
+    site: "@noredai",
+    creator: "@noredai",
   },
   robots: {
     index: true,
@@ -70,20 +77,54 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLdService = {
+const jsonLdOrganization = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
+  "@id": "https://www.noredai.digital/#organization",
   name: "nored AI",
+  alternateName: ["nored", "noredai"],
   url: "https://www.noredai.digital",
+  logo: "https://www.noredai.digital/nored-ai-logo.png",
   description:
     "Automatisation IA sur mesure pour les équipes commerciales des PME B2B. CRM auto-rempli, emails intelligents, déploiement en 5-10 jours.",
   founder: {
     "@type": "Person",
+    "@id": "https://www.noredai.digital/#honore",
     name: "Honoré Debavelaere",
+    url: "https://www.noredai.digital/about",
+    sameAs: ["https://fr.linkedin.com/in/honor%C3%A9-debavelaere-bb14ba230"],
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "contact@nored-ai.com",
+    contactType: "customer support",
+    availableLanguage: "French",
   },
   areaServed: "FR",
-  serviceType: "Automatisation IA commerciale",
-  priceRange: "€€",
+  sameAs: [
+    "https://fr.linkedin.com/in/honor%C3%A9-debavelaere-bb14ba230",
+  ],
+};
+
+const jsonLdWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.noredai.digital/#website",
+  name: "nored AI",
+  alternateName: "nored",
+  url: "https://www.noredai.digital",
+  publisher: {
+    "@id": "https://www.noredai.digital/#organization",
+  },
+  inLanguage: "fr-FR",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.noredai.digital/?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const jsonLdFaq = {
@@ -163,7 +204,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
         <script
           type="application/ld+json"

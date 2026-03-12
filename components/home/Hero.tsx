@@ -35,7 +35,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <span className="text-[13px] text-text-secondary font-medium">
-                Automatisation IA pour equipes commerciales
+                nored AI — Automatisation IA pour equipes commerciales
               </span>
             </motion.div>
 
