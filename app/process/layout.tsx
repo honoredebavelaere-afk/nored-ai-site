@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comment ça marche",
+  title: "Méthode & Process — Déploiement en 5-10 jours",
   description:
-    "Du sur-mesure, pas du template. Découvrez notre process en 4 étapes : audit, configuration, déploiement et suivi continu.",
+    "De l'audit à la mise en production en 5-10 jours. Audit gratuit, configuration sur mesure, déploiement et formation équipe. Zéro perturbation de vos process existants.",
+  alternates: { canonical: "https://noredai.digital/process" },
 };
 
 export default function ProcessLayout({ children }: { children: React.ReactNode }) {

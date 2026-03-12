@@ -7,8 +7,10 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Solutions",
-  description: "CRM auto-rempli, emails de suivi, reponses IA, devis express.",
+  title: "Solutions d'automatisation IA pour commerciaux",
+  description:
+    "CRM rempli automatiquement après chaque appel, emails de suivi rédigés par l'IA, réponses contextuelles, devis express. Intégration à vos outils existants.",
+  alternates: { canonical: "https://noredai.digital/services" },
 };
 
 export default function ServicesPage() {
