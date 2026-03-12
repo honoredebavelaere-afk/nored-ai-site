@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Solutions d'automatisation IA pour commerciaux",
   description:
     "CRM rempli automatiquement après chaque appel, emails de suivi rédigés par l'IA, réponses contextuelles, devis express. Intégration à vos outils existants.",
-  alternates: { canonical: "https://noredai.digital/services" },
+  alternates: { canonical: "https://www.noredai.digital/services" },
 };
 
 export default function ServicesPage() {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://noredai.digital/sitemap.xml",
+    sitemap: "https://www.noredai.digital/sitemap.xml",
   };
 }

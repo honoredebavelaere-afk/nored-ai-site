@@ -24,7 +24,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://noredai.digital"),
+  metadataBase: new URL("https://www.noredai.digital"),
   title: {
     default: "nored AI — Automatisation IA pour équipes commerciales PME",
     template: "%s | nored AI",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "automatisation prospection",
     "gain de temps commercial",
   ],
-  authors: [{ name: "Honoré Debavelaere", url: "https://noredai.digital" }],
+  authors: [{ name: "Honoré Debavelaere", url: "https://www.noredai.digital" }],
   creator: "nored AI",
   icons: {
     icon: "/favicon.svg",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "nored AI — Automatisation IA pour équipes commerciales PME",
     description:
       "Automatisez le travail administratif de vos commerciaux. CRM rempli automatiquement, emails de suivi, devis express. Déployé en 5-10 jours.",
-    url: "https://noredai.digital",
+    url: "https://www.noredai.digital",
     siteName: "nored AI",
     type: "website",
     locale: "fr_FR",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://noredai.digital",
+    canonical: "https://www.noredai.digital",
   },
 };
 
@@ -74,7 +74,7 @@ const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "nored AI",
-  url: "https://noredai.digital",
+  url: "https://www.noredai.digital",
   description:
     "Automatisation IA sur mesure pour les équipes commerciales des PME B2B. CRM auto-rempli, emails intelligents, déploiement en 5-10 jours.",
   founder: {
@@ -145,11 +145,11 @@ const jsonLdBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://noredai.digital" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://noredai.digital/services" },
-    { "@type": "ListItem", position: 3, name: "Notre Méthode", item: "https://noredai.digital/process" },
-    { "@type": "ListItem", position: 4, name: "À propos", item: "https://noredai.digital/about" },
-    { "@type": "ListItem", position: 5, name: "Contact", item: "https://noredai.digital/contact" },
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.noredai.digital" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.noredai.digital/services" },
+    { "@type": "ListItem", position: 3, name: "Notre Méthode", item: "https://www.noredai.digital/process" },
+    { "@type": "ListItem", position: 4, name: "À propos", item: "https://www.noredai.digital/about" },
+    { "@type": "ListItem", position: 5, name: "Contact", item: "https://www.noredai.digital/contact" },
   ],
 };
 
